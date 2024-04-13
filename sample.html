@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Left Sidebar Assistant</title>
+  <style>
+    #leftSidebarAssistant {
+      width: 280px;
+      text-align: center; 
+      padding: 15px;
+      border-bottom: 1px solid #E6E6E6;
+      background-color: #fff;
+    }
+
+    #leftSidebarAssistantOuterCircle {
+      height: 210px;
+      width: 210px;
+      transform: rotate(-90deg);
+    }
+
+    #leftSidebarAssistantInnerCircle {
+      height: 170px;
+      width: 170px;
+      transform: rotate(-90deg);
+      position: absolute;
+      left: 78px;
+      top: 43px;
+    }
+
+    .progress-bar__background {
+      fill: none;
+      stroke: #D3DCE9;
+      stroke-width: 2px;
+    }
+
+    .progress-bar__progress {
+      fill: none;
+      stroke: #EF2B2B;
+      stroke-dasharray: 100 100;
+      stroke-dashoffset: 100;
+      stroke-linecap: round;
+      stroke-width: 2px;
+      transition: stroke-dashoffset 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+<div id="leftSidebarAssistant">
+  <svg id="leftSidebarAssistantOuterCircle" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
+    <circle cx="16" cy="16" r="10.9155" class="progress-bar__background"></circle>
+    <circle cx="16" cy="16" r="10.9155" class="progress-bar__progress js-progress-bar" style="stroke-dashoffset: 50px;"></circle>
+  </svg>
+  <svg id="leftSidebarAssistantInnerCircle" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
+    <circle cx="16" cy="16" r="10.9155" class="progress-bar__background"></circle>
+    <circle cx="16" cy="16" r="10.9155" class="progress-bar__progress js-progress-bar" style="stroke-dashoffset: 50px;"></circle>
+  </svg>
+</div>
+
+<script>
+  var percentageComplete = 0.5;
+  var strokeDashOffsetValue = 100 - (percentageComplete * 100);
+  var progressBar = document.querySelector(".js-progress-bar");
+  progressBar.style.strokeDashoffset = strokeDashOffsetValue;
+</script>
+
+</body>
+</html>
+

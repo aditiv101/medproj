@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add custom styles for rotating image */
+        #home {
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #image-carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (min-width: 600px) {
+            .carousel-image {
+                max-width: 600px;
+            }
+        }
+
+        @media screen and (min-width: 900px) {
+            .carousel-image {
+                max-width: 900px;
+            }
+        }
+
+        /* Other styles can be added here */
+    </style>
+    <title>Your Nursing Home</title>
+</head>
+<body>
+    <header style="background-color: navy; color: #fff;">
+        <h1>Your Nursing Home</h1>
+        <p>Providing Compassionate Care for a Healthier Tomorrow</p>
+    </header>
+    
+    <nav style="background-color: navy; color: #fff;">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="patients.html">Patients</a></li>
+            <li><a href="readings.html">Readings</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <div class="container">
+            <div class="slider-wrapper">
+              <button id="prev-slide" class="slide-button material-symbols-rounded">
+                chevron_left
+              </button>
+              <ul class="image-list">
+                <img class="image-item" src="https://i.pinimg.com/564x/b6/59/28/b6592879fc594d5cb372553192973a5e.jpg" alt="img-1" />
+                <img class="image-item" src="https://i.pinimg.com/736x/84/87/71/848771c4e9d542abf36af035d2f7aadd.jpg" alt="img-2" />
+                <img class="image-item" src="https://i.pinimg.com/564x/cd/e1/00/cde100c15811d34a5b2625a12940a37c.jpg" alt="img-3" />
+                <img class="image-item" src="https://i.pinimg.com/236x/30/d4/b7/30d4b702686f1980108666657ff12fff.jpg" alt="img-4" />
+                <img class="image-item" src="https://i.pinimg.com/236x/36/18/df/3618df0e992a6d6156416b8d27b97790.jpg" alt="img-5" />
+                <img class="image-item" src="https://i.pinimg.com/564x/ef/7e/e2/ef7ee23061879ee6ed309af7fb38eece.jpg" alt="img-6" />
+                <img class="image-item" src="https://i.pinimg.com/564x/19/62/34/1962345b7829feba6d4259b6823a3378.jpg" alt="img-7" />
+                <img class="image-item" src="https://i.pinimg.com/564x/6c/0a/60/6c0a60d9eb48dc7768676008b72bccba.jpg" alt="img-8" />
+                <img class="image-item" src="https://i.pinimg.com/564x/42/c6/e5/42c6e5ad272755b85079ae4cdf4b7762.jpg" alt="img-9" />
+                <img class="image-item" src="https://i.pinimg.com/564x/ac/a5/fa/aca5fa6dc9ebf728c3f71047201c8aa9.jpg" alt="img-10" />
+              </ul>
+              <button id="next-slide" class="slide-button material-symbols-rounded">
+                chevron_right
+              </button>
+            </div>
+            <div class="slider-scrollbar">
+              <div class="scrollbar-track">
+                <div class="scrollbar-thumb"></div>
+              </div>
+            </div>
+          </div>
+        <address>
+            <p>Contact: Your Contact Details</p>
+        </address>
+    </section>
+
+    <footer style="background-color: navy; color: #fff;">
+        <p>&copy; 2023 Your Nursing Home</p>
+        <section id="emergency-call" style="display: none;">
+            <h2>Emergency Call</h2>
+            <p>In case of an emergency, please dial 108.</p>
+            <!-- Hidden link to trigger the call -->
+            <a id="hidden-link" href="tel:108" style="display: none;">Hidden Link</a>
+        </section>
+    </footer>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="trial.js"></script>
+</body>
+</html>
+
